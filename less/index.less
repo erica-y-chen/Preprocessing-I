@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: red;
 }
 ol, ul {
 	list-style: none;
@@ -57,3 +58,271 @@ html, body {
     height: 100%;
 }
 
+//Theme Variables
+@secondary-color: @apricot; 
+
+//Color 
+@apricot: #ED8761;
+
+//Mixin
+.center(@direction, @justify, @align) {
+	display: flex;
+	flex-direction: @direction; 
+	justify-content: @justify;
+	align-items: @align; 
+}
+
+.progress(@percent) {
+	height: 100%;
+	width: @percent;
+	background-color: @apricot; 
+	position: absolute;
+	left: 0;
+}
+
+@mobile: (max-width: 500px);
+
+
+//css 
+.resume {
+	width: 100%;
+    max-width: 68em;
+    margin: 0 auto;
+	padding: 0 2.5em;
+	margin-top: -6em;
+	.center(row, space-between, flex-start);
+
+	@media @mobile {
+		flex-direction: column;
+		padding: 0 1.25em;
+	}
+
+	.column1 {
+		.center(column, space-between, flex-start);
+		width: 20%;
+		margin-right: 4em; 
+
+		ul {
+			margin: 0 0 0.5em 0;
+		}
+
+		.resume-section {
+			margin-bottom: 2em;
+			width: 100%;
+		}
+
+		@media @mobile {
+			width: 100%;
+			margin-top: 2em;
+		}
+	}
+
+
+
+	.column2 {
+		.center(column, flex-start, space-between);
+		width: 80%;
+
+		@media @mobile {
+			width: 100%;
+		}
+	}
+	
+	.work-experience {
+
+		.position-details {
+			.center(row, space-between, center);
+			margin-top: 1em;
+		}
+
+		.position-title {
+			color: @apricot;
+			font-size: 1.3em;
+			
+		}
+
+		.date {
+			margin-right: 0;	
+		}
+		
+		.date_current {
+			font-weight: 500;
+			margin-right: 0;	
+		}
+
+		.company {
+			font-style: italic;
+		}
+
+		
+		@media @mobile {
+			margin-top: 2em;
+		}
+
+		:first-child {
+			@media @mobile {
+				margin-top: 0em;
+			}
+		}
+
+
+	}
+
+	.work-description {
+		padding-left: 1em;
+		padding-top: 0.5em;
+		padding-bottom: 1em;
+
+		&:hover {
+			width: 100%;
+			height: 105%;
+			font-size: 1.2em;
+			background-color: @apricot;
+			color: white;
+			transition: background-color 1.5s ease, opacity 1.5s ease;
+			-moz-transition: background-color 1.5s ease, opacity 1.5s ease;
+			-webkit-transition: background-color 1.5s ease, opacity 1.5s ease;
+			-ms-transition: background-color 1.5s ease, opacity 1.5s ease;
+			padding: 1em;
+			margin-top: 1em;
+			border-radius: 5px;
+		}
+
+		.location {
+			display: none;
+
+			&:hover {
+				display: unset;
+				color: white;
+			}
+		}
+
+		@media @mobile {
+			padding-bottom: 2em;
+			border-bottom: 2px solid @apricot;
+		}
+
+		}
+
+	}
+
+
+	.section_header_box {
+		width: 100%;
+		padding: 5px 0;
+		//background-color: @apricot;
+		color: @apricot;
+		font-weight: bold;
+		font-size: 1.3em;
+		letter-spacing: 3px;
+		padding-bottom: 10px;
+		
+		@media @mobile {
+			text-align: center;
+			margin: auto;
+			background-color: @apricot;
+			color: white;
+			margin-bottom: 1em;
+			font-size: 1em;
+			margin-bottom: 2em;
+		}
+	}
+	
+	.section_header_underline {
+		width: 100%;
+		border-bottom: 2px solid @apricot;
+		font-size: 1.3em;
+		font-weight: bold; 
+		color: @apricot; 
+		padding: 5px 0;
+		letter-spacing: 3px;
+
+		@media @mobile {
+			text-align: center;
+			margin: auto;
+			background-color: @apricot;
+			color: white;
+			font-size: 1em;
+		}
+	}
+
+	.skill {
+		@media @mobile {
+			display: flex;
+			flex-direction: row;
+		}
+	}
+	.progress-bar {
+		position: relative;
+		border-radius: 10px;
+		background-color: rgb(182, 182, 182);
+		height: 20px;
+		width: 100%;
+		margin-left: 0;
+		margin-top: 0.5em;
+		margin-bottom: 1.25em;
+
+		@media @mobile {
+			width: 70%;
+			align-content: center;
+			margin-left: auto;
+		}
+
+		.progress-bar-fill33 {
+			.progress(33%);
+			border-radius: 10px;
+		}
+
+		.progress-bar-fill50 {
+			.progress(50%);
+			border-radius: 10px;
+		}
+
+		.progress-bar-fill60 {
+			.progress(60%);
+			border-radius: 10px;
+		}
+
+		.progress-bar-fill75 {
+			.progress(75%);
+			border-radius: 10px;
+		}
+
+		.progress-bar-fill100 {
+			.progress(100%);
+			border-radius: 10px;
+		}
+	}
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 100%;
+	max-width: 68em;
+	margin: 0 auto;
+	padding: 0 2.5em;
+	margin-top: 2em;
+	margin-bottom: 5em;
+
+	.contact-info{
+		padding: 10px 0 5px 0;
+		//background-color: @apricot;
+		color: @apricot;
+		font-weight: bold;
+		font-size: 1.3em;
+		letter-spacing: 3px;
+		border-top: 1px solid @apricot;
+		width: 100%;	
+		
+		@media @mobile {
+			border-top: none;
+			padding-top: 0px;
+		}
+	}
+
+	.contact-details{
+		margin-left: 2em;
+	}
+}
