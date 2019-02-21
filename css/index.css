@@ -1,1 +1,355 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  background-color: red;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.resume {
+  width: 100%;
+  max-width: 68em;
+  margin: 0 auto;
+  padding: 0 2.5em;
+  margin-top: -6em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media (max-width: 500px) {
+  .resume {
+    flex-direction: column;
+  }
+}
+.resume .column1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 30%;
+  margin-right: 3em;
+}
+.resume .column1 ul {
+  margin: 0 0 0.5em 0;
+}
+.resume .column1 .resume-section {
+  margin-bottom: 2em;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .resume .column1 {
+    width: 100%;
+    margin-top: 2em;
+  }
+}
+.resume .column2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: space-between;
+  width: 65%;
+}
+@media (max-width: 500px) {
+  .resume .column2 {
+    width: 100%;
+  }
+}
+.resume .work-experience .position-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+}
+.resume .work-experience .position-title {
+  color: #ED8761;
+  font-size: 1.3em;
+}
+.resume .work-experience .date {
+  margin-right: 0;
+}
+.resume .work-experience .date_current {
+  font-weight: 500;
+  margin-right: 0;
+}
+.resume .work-experience .company {
+  font-style: italic;
+}
+.resume .work-experience .work-description {
+  padding-left: 1em;
+  padding-top: 0.5em;
+}
+@media (max-width: 500px) {
+  .resume .work-experience .work-description {
+    padding-bottom: 2em;
+    border-bottom: 2px solid #ED8761;
+  }
+}
+@media (max-width: 500px) {
+  .resume .work-experience {
+    margin-top: 2em;
+  }
+}
+@media (max-width: 500px) {
+  .resume .work-experience :first-child {
+    margin-top: 0em;
+  }
+}
+.resume .section_header_box {
+  width: 100%;
+  padding: 5px 0;
+  color: #ED8761;
+  font-weight: bold;
+  font-size: 1.3em;
+  letter-spacing: 3px;
+}
+@media (max-width: 500px) {
+  .resume .section_header_box {
+    text-align: center;
+    margin: auto;
+    background-color: #ED8761;
+    color: white;
+    margin-bottom: 1em;
+    font-size: 1em;
+  }
+}
+.resume .section_header_underline {
+  width: 100%;
+  border-bottom: 2px solid #ED8761;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ED8761;
+  padding: 5px 0;
+  letter-spacing: 3px;
+}
+@media (max-width: 500px) {
+  .resume .section_header_underline {
+    text-align: center;
+    margin: auto;
+    background-color: #ED8761;
+    color: white;
+    font-size: 1em;
+  }
+}
+@media (max-width: 500px) {
+  .resume .skill {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.resume .progress-bar {
+  position: relative;
+  border-radius: 10px;
+  background-color: grey;
+  height: 20px;
+  width: 100%;
+  margin-left: 0;
+  margin-top: 0.5em;
+  margin-bottom: 1.25em;
+}
+@media (max-width: 500px) {
+  .resume .progress-bar {
+    width: 70%;
+    align-content: center;
+    margin-left: auto;
+  }
+}
+.resume .progress-bar .progress-bar-fill33 {
+  height: 100%;
+  width: 33%;
+  background-color: #ED8761;
+  position: absolute;
+  left: 0;
+  border-radius: 10px;
+}
+.resume .progress-bar .progress-bar-fill50 {
+  height: 100%;
+  width: 50%;
+  background-color: #ED8761;
+  position: absolute;
+  left: 0;
+  border-radius: 10px;
+}
+.resume .progress-bar .progress-bar-fill60 {
+  height: 100%;
+  width: 60%;
+  background-color: #ED8761;
+  position: absolute;
+  left: 0;
+  border-radius: 10px;
+}
+.resume .progress-bar .progress-bar-fill75 {
+  height: 100%;
+  width: 75%;
+  background-color: #ED8761;
+  position: absolute;
+  left: 0;
+  border-radius: 10px;
+}
+.resume .progress-bar .progress-bar-fill100 {
+  height: 100%;
+  width: 100%;
+  background-color: #ED8761;
+  position: absolute;
+  left: 0;
+  border-radius: 10px;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 68em;
+  margin: 0 auto;
+  padding: 0 2.5em;
+  margin-top: 2em;
+  margin-bottom: 5em;
+}
+.footer .contact-info {
+  padding: 10px 0 5px 0;
+  color: #ED8761;
+  font-weight: bold;
+  font-size: 1.3em;
+  letter-spacing: 3px;
+  border-top: 1px solid #ED8761;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .footer .contact-info {
+    border-top: none;
+    padding-top: 0px;
+  }
+}
+.footer .contact-details {
+  margin-left: 2em;
+}
