@@ -99,8 +99,8 @@ html, body {
 
 	.column1 {
 		.center(column, space-between, flex-start);
-		width: 30%;
-		margin-right: 3em; 
+		width: 20%;
+		margin-right: 4em; 
 
 		ul {
 			margin: 0 0 0.5em 0;
@@ -121,7 +121,7 @@ html, body {
 
 	.column2 {
 		.center(column, flex-start, space-between);
-		width: 65%;
+		width: 80%;
 
 		@media @mobile {
 			width: 100%;
@@ -154,17 +154,7 @@ html, body {
 			font-style: italic;
 		}
 
-		.work-description {
-			padding-left: 1em;
-			padding-top: 0.5em;
-			padding-bottom: 1em;
-
-			@media @mobile {
-				padding-bottom: 2em;
-				border-bottom: 2px solid @apricot;
-			}
-		}
-
+		
 		@media @mobile {
 			margin-top: 2em;
 		}
@@ -175,7 +165,47 @@ html, body {
 			}
 		}
 
+
 	}
+
+	.work-description {
+		padding-left: 1em;
+		padding-top: 0.5em;
+		padding-bottom: 1em;
+
+		&:hover {
+			width: 100%;
+			height: 105%;
+			font-size: 1.2em;
+			background-color: @apricot;
+			color: white;
+			transition: background-color 1.5s ease, opacity 1.5s ease;
+			-moz-transition: background-color 1.5s ease, opacity 1.5s ease;
+			-webkit-transition: background-color 1.5s ease, opacity 1.5s ease;
+			-ms-transition: background-color 1.5s ease, opacity 1.5s ease;
+			padding: 1em;
+			margin-top: 1em;
+			border-radius: 5px;
+		}
+
+		.location {
+			display: none;
+
+			&:hover {
+				display: unset;
+				color: white;
+			}
+		}
+
+		@media @mobile {
+			padding-bottom: 2em;
+			border-bottom: 2px solid @apricot;
+		}
+
+		}
+
+	}
+
 
 	.section_header_box {
 		width: 100%;
@@ -225,7 +255,7 @@ html, body {
 	.progress-bar {
 		position: relative;
 		border-radius: 10px;
-		background-color: grey;
+		background-color: rgb(182, 182, 182);
 		height: 20px;
 		width: 100%;
 		margin-left: 0;

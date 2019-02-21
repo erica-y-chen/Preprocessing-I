@@ -157,8 +157,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 30%;
-  margin-right: 3em;
+  width: 20%;
+  margin-right: 4em;
 }
 .resume .column1 ul {
   margin: 0 0 0.5em 0;
@@ -178,7 +178,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: space-between;
-  width: 65%;
+  width: 80%;
 }
 @media (max-width: 500px) {
   .resume .column2 {
@@ -206,17 +206,6 @@ body {
 .resume .work-experience .company {
   font-style: italic;
 }
-.resume .work-experience .work-description {
-  padding-left: 1em;
-  padding-top: 0.5em;
-  padding-bottom: 1em;
-}
-@media (max-width: 500px) {
-  .resume .work-experience .work-description {
-    padding-bottom: 2em;
-    border-bottom: 2px solid #ED8761;
-  }
-}
 @media (max-width: 500px) {
   .resume .work-experience {
     margin-top: 2em;
@@ -225,6 +214,38 @@ body {
 @media (max-width: 500px) {
   .resume .work-experience :first-child {
     margin-top: 0em;
+  }
+}
+.resume .work-description {
+  padding-left: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+}
+.resume .work-description:hover {
+  width: 100%;
+  height: 105%;
+  font-size: 1.2em;
+  background-color: #ED8761;
+  color: white;
+  transition: background-color 1.5s ease, opacity 1.5s ease;
+  -moz-transition: background-color 1.5s ease, opacity 1.5s ease;
+  -webkit-transition: background-color 1.5s ease, opacity 1.5s ease;
+  -ms-transition: background-color 1.5s ease, opacity 1.5s ease;
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 5px;
+}
+.resume .work-description .location {
+  display: none;
+}
+.resume .work-description .location:hover {
+  display: unset;
+  color: white;
+}
+@media (max-width: 500px) {
+  .resume .work-description {
+    padding-bottom: 2em;
+    border-bottom: 2px solid #ED8761;
   }
 }
 .resume .section_header_box {
@@ -274,7 +295,7 @@ body {
 .resume .progress-bar {
   position: relative;
   border-radius: 10px;
-  background-color: grey;
+  background-color: #b6b6b6;
   height: 20px;
   width: 100%;
   margin-left: 0;
